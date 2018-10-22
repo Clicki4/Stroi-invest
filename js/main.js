@@ -14,33 +14,9 @@ $(document).ready(function() {
 	});
 
 
-$('.directions-blocks').slick(
-			{
-				arrows: false,
-				dots: true,
-				slidesToShow: 4,
-        		slidesToScroll: 1,
-        		responsive: [
-				    {
-				      breakpoint: 767,
-				      settings: {
-				      	slidesToShow: 1,
-				        slidesToScroll: 1
-				      }
-				    },
-				    {
-				      breakpoint: 1200,
-				      settings: {
-				      	slidesToShow: 3,
-				        slidesToScroll: 1
-				      }
-				    },
-			    ]
 
-			}
-			);
 
-	var elem = document .querySelector ( '.calc-range' );
+	var elem = document .querySelector( '.calc-range' );
 	var init = new Powerange(elem, { min: 100000, max: 3000000, start: 100000, hideRange:true, step: 100000 });
 	var per, mount, result, total, mounthly;
 	var money = +$('.calc-range').val();
@@ -70,5 +46,34 @@ $('.directions-blocks').slick(
 		$('.calc-mounthly span').text(mounthly.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 '));
 	});
 
-});
+	});
 
+
+
+
+function isVisible(elem) {
+
+    var coords = elem.getBoundingClientRect();
+
+    var windowHeight = document.documentElement.clientHeight;
+
+    // верхняя граница elem в пределах видимости ИЛИ нижняя граница видима
+    var topVisible = coords.top > 0 && coords.top < windowHeight;
+    var bottomVisible = coords.bottom < windowHeight && coords.bottom > 0;
+
+    return topVisible || bottomVisible;
+}
+
+function showVisible() {
+	var blocks = document.getElementsByClassName('directions-block');
+	for (i = 0; i < blocks.length; i++) {
+	  var block = blocks[i];
+	  if (isVisible(block)) {
+	    block.firstElementChild.classList.add('anim-right');
+	    block.lastElementChild.classList.add('anim-left');
+	  }
+	}
+}
+
+  window.onscroll = showVisible;
+  showVisible();

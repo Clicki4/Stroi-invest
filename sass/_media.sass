@@ -1,21 +1,120 @@
 /*Адаптив для сайта*/
 
-@media (max-width: 767px)
+
+
+@media (min-width: 320px) and (max-width: 575px)
+	h2
+		font-size: 30px
+
 	.top-nav
+		padding: 5px 0
+		height: 50px	
+		&_position-mobile
+			position: absolute /* коммент тест */
+			width: 100%
+			z-index: 102
+			background: $white
+			padding: 0 34px
 		&_btn
 			display: block
 		&_menu
-			flex-direction: column
 			display: none
+			flex-direction: column
 			&__active
 				display: flex
 				margin-bottom: 0
 			li
-				line-height: 2
+				line-height: 3
 				a
-					&:after
-						display: none
+					display: block
+					&:hover
+						color: $active-color
+						&::after
+							transform: translateY(0px) scale(1)
+
+
 	.left-sidebar
+		margin-top: 50px /* коммент тест */
+		&_position-mobile
+			position: absolute /* коммент тест */
+			width: 100%
+			z-index: 90
+			background: $white
+			padding: 0
+		&_btn
+			display: block
+			
+		&_menu
+			display: none
+			&__active
+				display: block
+			li
+				a
+					padding: 7px 29px
+		&_object
+			display: none
+
+
+	.directions
+		&-block
+			margin: 10px 0
+			justify-content: space-between
+			img
+				width: 100px
+
+
+	.content
+		margin-top: 80px
+		.mobile-paragraph-none
+			display: none
+
+
+	.footer
+		.copy
+			text-align: center
+		small
+			display: block
+			margin: 36px auto
+		&-contacts
+			text-align: left
+
+
+
+@media (min-width: 576px) and (max-width: 767px)
+	.top-nav
+		padding: 5px 0
+		height: 50px
+		&_position-mobile
+			position: absolute /* коммент тест */
+			width: 100%
+			z-index: 101
+			background: $white
+			padding: 0 34px
+		&_btn
+			display: block
+		&_menu
+			display: none
+			flex-direction: column
+			&__active
+				display: flex
+				margin-bottom: 0
+			li
+				line-height: 4
+				a
+					display: block
+					&:hover
+						color: $active-color
+						&::after
+							transform: translateY(0px) scale(1)
+
+	.left-sidebar
+		margin-top: 40px /* коммент тест */
+		&_position-mobile
+			position: absolute /* коммент тест */
+			width: 100%
+			z-index: 90
+			background: $white
+			padding: 0
 		&_btn
 			display: block
 		&_menu
@@ -26,31 +125,52 @@
 			display: none
 	.copy
 		text-align: center
-	small
-		display: block
-		margin: 36px auto
+		small
+			display: block
+			margin: 36px auto
 	.footer
 		&-contacts
 			text-align: left
+	.content
+		margin-top: 80px
 
 
 @media (min-width: 768px) and (max-width: 991px)
 	.top-nav
+		padding: 5px 0
+		height: 50px
+		&_position-mobile
+			position: absolute /* коммент тест */
+			width: 100%
+			z-index: 102
+			background: $white
+			padding: 0 34px
 		&_btn
 			display: block
 		&_menu
 			display: none
+			flex-direction: column
 			&__active
 				display: flex
 				justify-content: space-around
 				margin-bottom: 0
 			li
 				margin-right: 0
-				line-height: 2
+				line-height: 4
 				a
-					&:after
-						display: none
+					display: block
+					&:hover
+						color: $active-color
+						&::after
+							transform: translateY(0px) scale(1)
 	.left-sidebar
+		margin-top: 40px
+		&_position-mobile
+			position: absolute /* коммент тест */
+			width: 100%
+			z-index: 90
+			background: $white
+			padding: 0
 		&_btn
 			display: block
 		&_menu
@@ -59,7 +179,15 @@
 				display: block
 		&_object
 			display: none
+
+	.content
+		margin-top: 80px
+
 	.footer
+		.copy
+			small
+				display: block
+				margin: 36px 0
 		&-contacts
 			text-align: left
 
@@ -71,3 +199,4 @@
 		justify-content: space-between
 		li
 			margin: 0
+	

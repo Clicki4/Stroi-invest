@@ -5,17 +5,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta name="description" content="">
 		<meta name="author" content="">
-		<link rel="icon" href="/favicon.ico">
+		
 
 		<title>Строй-Инвет</title>
 
 		<!-- Bootstrap core CSS -->
-		<link href="css/bootstrap-grid.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		<!-- Интегрируем шрифт Roboto -->
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
-		<!-- Slick slider -->
-		<link rel="stylesheet" href="slick/slick-theme.css">
-		<link rel="stylesheet" href="slick/slick.css">
 		<!-- Custom styles for this template -->
 		<link href="css/main.css" rel="stylesheet">
 		<!-- social icon -->
@@ -25,58 +22,104 @@
 	<body>
 		<div class="container">
 			<div class="top-nav">
-				<div class="row justify-content-between align-items-center">
-					<div class="col-xl-auto col-lg-2">
-						<div class="logo">
-							<img src="img/logo.jpg" alt="Инвестстрой">
+				<div class="top-nav_position-mobile">
+					<div class="row justify-content-between align-items-center">
+						<div class="col-xl-auto col-lg-2">
+							<img class="top-nav_logo" src="img/icon-company/house.png" alt="house">
 						</div>
-					</div>
-					<div class="col-xl-auto col-lg-10">
-						<button class="top-nav_btn">
-							<i class="fa fa-bars"></i>
-						</button>
-						<ul class="top-nav_menu">
-							<li><a href="index.html">Главная</a></li>
-							<li><a href="about.html">О компании</a></li>
-							<li><a href="object-page.html">Наши услуги</a></li>
-							<li><a href="organization.html">Структура</a></li>
-							<li><a href="investments.html">Инвесторам</a></li>
-							<li><a href="contacts.html">Контакты</a></li>
-						</ul>
+						<div class="col-xl-auto col-lg-10">
+							<button class="top-nav_btn">
+								<i class="fa fa-bars"></i>
+							</button>
+							<ul class="top-nav_menu">
+								<li><a href="index.html">Главная</a></li>
+								<li><a href="about.html">О компании</a></li>
+								<li><a href="object-page.html">Наши услуги</a></li>
+								<li><a href="organization.html">Структура</a></li>
+								<li><a href="investments.html">Инвесторам</a></li>
+								<li><a href="contacts.html">Контакты</a></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-4">
 					<div class="left-sidebar">
-						<button class="left-sidebar_btn">
-							Категории
-						</button>
-						<ul class="left-sidebar_menu">
-							<li><a href="#">Земля</a></li>
-							<li><a href="#">Жилая недвижимость</a></li>
-							<li><a href="#">Коммерческая недвижимость</a></li>
-							<li><a href="#">Новостройки</a></li>
-							<li><a href="#">Дома/Коттеджи</a></li>
-							<li><a href="#">Строительство</a></li>
-							<li><a href="#">Аренда</a></li>
-						</ul>
-						<div class="left-sidebar_object">
-							<img src="img/object/object_preview-1.jpg" alt="">
-							<div class="left-sidebar_object-description">
-								<h3>Жилой комплекс в г.Москва</h3>
-								<p>190-квартирный 12-этажный жилой дом №88 по ул. Ленина в микрорайоне Центральный...</p>
-								<a href="#">Узнать подробнее</a>
-							</div>
+						<div class="left-sidebar_position-mobile">
+							<button class="left-sidebar_btn">
+								Категории
+							</button>
+							<ul class="left-sidebar_menu">
+								<li><a href="#">Земля</a></li>
+								<li><a href="#">Жилая недвижимость</a></li>
+								<li><a href="#">Коммерческая недвижимость</a></li>
+								<li><a href="#">Новостройки</a></li>
+								<li><a href="#">Дома/Коттеджи</a></li>
+								<li><a href="#">Строительство</a></li>
+								<li><a href="#">Аренда</a></li>
+							</ul>
 						</div>
-						<div class="left-sidebar_object">
-							<img src="img/object/object_preview-2.jpg" alt="">
-							<div class="left-sidebar_object-description">
-								<h3>Жилой комплекс в г.Минск</h3>
-								<p>150-квартирный 10-этажный жилой дом №14 по ул. К.Маркса в микрорайоне Южный...</p>
-								<a href="#">Узнать подробнее</a>
-							</div>
-						</div>
+
+						
+						<div id="carousel-sidebar" class="carousel slide carousel-fade" data-ride="carousel">
+						 	<div class="carousel-inner left-sidebar_object">
+						    	<div class="carousel-item active">
+						    		<img class="d-block w-100 img-sidebar" src="img/object/object_preview-1.jpg" alt="First slide">
+							    	<div class="left-sidebar_object-description">
+							    		<h3>Жилой комплекс в г.Москва</h3>
+							    		<p>190-квартирный 12-этажный жилой дом №88 по ул. Ленина в микрорайоне Центральный...</p>
+							    		<a href="#">Узнать подробнее</a>
+							    	</div>
+						    	</div>
+							    <div class="carousel-item">
+							    	<img class="d-block w-100 img-sidebar" src="img/object/object_preview-2.jpg" alt="Second slide">
+							    	<div class="left-sidebar_object-description">
+							    		<h3>Жилой комплекс в г.Минск</h3>
+							    		<p>150-квартирный 10-этажный жилой дом №14 по ул. К.Маркса в микрорайоне Южный...</p>
+							    		<a href="#">Узнать подробнее</a>
+							    	</div>
+							    </div>
+							    <div class="carousel-item">
+							    	<img class="d-block w-100 img-sidebar" src="img/object/object_preview-1.jpg" alt="Third slide">
+							    	<div class="left-sidebar_object-description">
+							    		<h3>Жилой комплекс в г.Москва</h3>
+							    		<p>190-квартирный 12-этажный жилой дом №88 по ул. Ленина в микрорайоне Центральный...</p>
+							    		<a href="#">Узнать подробнее</a>
+							    	</div>
+							    </div>
+						  	</div>
+						</div> <!-- carousel-sidebar -->
+
+
+						<div id="carousel-sidebar-2" class="carousel slide carousel-fade" data-ride="carousel">
+						 	<div class="carousel-inner left-sidebar_object">
+						    	<div class="carousel-item active">
+						    		<img class="d-block w-100 img-sidebar" src="img/object/object_preview-1.jpg" alt="First slide">
+							    	<div class="left-sidebar_object-description">
+							    		<h3>Жилой комплекс в г.Москва</h3>
+							    		<p>190-квартирный 12-этажный жилой дом №88 по ул. Ленина в микрорайоне Центральный...</p>
+							    		<a href="#">Узнать подробнее</a>
+							    	</div>
+						    	</div>
+							    <div class="carousel-item">
+							    	<img class="d-block w-100 img-sidebar" src="img/object/object_preview-2.jpg" alt="Second slide">
+							    	<div class="left-sidebar_object-description">
+							    		<h3>Жилой комплекс в г.Минск</h3>
+							    		<p>150-квартирный 10-этажный жилой дом №14 по ул. К.Маркса в микрорайоне Южный...</p>
+							    		<a href="#">Узнать подробнее</a>
+							    	</div>
+							    </div>
+							    <div class="carousel-item">
+							    	<img class="d-block w-100 img-sidebar" src="img/object/object_preview-1.jpg" alt="Third slide">
+							    	<div class="left-sidebar_object-description">
+							    		<h3>Жилой комплекс в г.Москва</h3>
+							    		<p>190-квартирный 12-этажный жилой дом №88 по ул. Ленина в микрорайоне Центральный...</p>
+							    		<a href="#">Узнать подробнее</a>
+							    	</div>
+							    </div>
+						  	</div>
+						</div> <!-- carousel-sidebar -->
 					</div><!-- /.left-sidebar -->
 				</div>
 				<!-- /.col-md-4 -->
@@ -102,24 +145,29 @@
 					<div class="directions">
 						<h2>Направление деятельности</h2>
 						<div class="directions-blocks">
-							<div class="directions-block" style="background-image: url('img/directions/1.jpg')">
-								<h3>Девелоперские проекты</h3>
+							<div class="directions-block">
+								<h3 class="block-right">Девелоперские проекты</h3>
+								<img class="block-left" src="img/directions/1.svg" alt="">
 							</div>
 							<!-- /.directions-block -->
-							<div class="directions-block" style="background-image: url('img/directions/2.jpg')">
-								<h3>Продажа недвижимости</h3>
+							<div class="directions-block">
+								<img class="block-right" src="img/directions/2.svg" alt="">
+								<h3 class="block-left">Продажа недвижимости</h3>
 							</div>
 							<!-- /.directions-block -->
-							<div class="directions-block" style="background-image: url('img/directions/3.jpg')">
-								<h3>Строительство</h3>
+							<div class="directions-block">
+								<h3 class="block-right">Строительство</h3>
+								<img class="block-left" src="img/directions/3.svg" alt="">
 							</div>
 							<!-- /.directions-block -->
-							<div class="directions-block" style="background-image: url('img/directions/4.jpg')">
-								<h3>Инвестиционные программы</h3>
+							<div class="directions-block">
+								<img class="block-right" src="img/directions/4.svg" alt="">
+								<h3 class="block-left">Инвестиционные программы</h3>
 							</div>
 							<!-- /.directions-block -->
-							<div class="directions-block" style="background-image: url('img/directions/5.jpg')">
-								<h3>Финансовые инструменты</h3>
+							<div class="directions-block">
+								<h3 class="block-right">Финансовые инструменты</h3>
+								<img class="block-left" src="img/directions/5.svg" alt="">
 							</div>
 							<!-- /.directions-block -->
 						</div>
@@ -169,7 +217,7 @@
 						<div class="footer-contacts">
 							<p class="footer-contacts_phone">8 (800) 000 999</p>
 							<p class="footer-contacts_address">г.Москва ул.Ленина д.55 офис №2</p>
-							<p class="footer-contacts_address">г.Калуга ул.Циолковского д.4 офис №6</p>
+							<p class="footer-contacts_address">г.Калуга ул.Московская д.4 офис №6</p>
 							<p class="footer-contacts_email">invest@mail.ru</p>
 						</div>
 						<div class="footer-social-links">
@@ -192,14 +240,31 @@
 			</div>
 			<!-- /.container -->
 		</footer>
-		
+		<div class="modal">
+			<div class="modal-content">
+				<div class="close">&times;</div>
+				<h4>Заполните поля</h4>
+				<p>Мы сяжемся с вами в ближайшее время</p>
+				<div class="modal-form">
+					<form action="">
+						<input type="text" placeholder="Ваше имя?">
+						<input type="text" placeholder="Ваш телефон?">
+						<button type="submit" class="btn btn-primary modal-form_btn">Отправить заявку</button>
+						<small>
+							Нажимая на кнопку, даете свое согласие на <a href="#">Обработку персональных данных</a>
+						</small>
+					</form>
+				</div>
+			</div>
+		</div>
 
 
 		<!-- Bootstrap core JavaScript ================================================== -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 		<!-- Placed at the end of the document so the pages load faster -->
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 		<script>window.jQuery || document.write('<script src="js/jquery.com/jquery-3.2.1.slim.min.js"><\/script>')</script>
-		<script src="slick/slick.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>
